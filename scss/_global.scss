@@ -1,0 +1,110 @@
+// Глобальные стили здесь
+html, body {
+  margin: 0;
+}
+::selection {
+  background: #16151F;
+}
+body {
+  background: #16151F;
+  font-size: $main-font-size;
+  font-family: $main-font-family;
+  color: $color-white;
+  font-weight: 400;
+}
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  font-family: $dop-font-family;
+}
+.d-flex {
+  display: flex;
+}
+div, form, input, p, a, span {
+  box-sizing: border-box;
+}
+ul,li, p {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition-default;
+}
+a:hover {
+  color:  #da82ff;
+}
+button:active, button:focus, input:active, input:focus {
+  outline: none !important;
+  text-decoration: none !important;
+}
+button:hover {
+  cursor: pointer;
+}
+section, footer, header {
+  overflow: hidden;
+}
+:focus {
+  outline: none !important;
+}
+.svg path {
+  transition: $transition-default;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.form__field {
+  -webkit-appearance: none;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.container-fluid {
+  width: 100%;
+  padding: 0 40px;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+// Media
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1010px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  
+}
+@media screen and (max-width: 991px) {
+  
+}
+@media screen and (max-width: 767px) {
+  
+}
+@media screen and (max-width: 575px) {
+  
+}
