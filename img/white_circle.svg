@@ -1,0 +1,28 @@
+<svg id="Layer_55" data-name="Layer 55" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1276.35 1276.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 3.44px;
+      }
+    </style>
+  </defs>
+  <title>white_circle</title>
+  <g>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="636.46" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="599.73" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="563.01" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="526.29" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="489.57" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="452.85" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="416.13" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="379.41" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="342.69" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <circle class="cls-1" cx="638.17" cy="638.17" r="305.97" transform="translate(-264.34 638.17) rotate(-45)"/>
+    <path class="cls-1" d="M638.17,907.42c-148.7,0-269.25-120.54-269.25-269.25S489.47,368.92,638.17,368.92,907.42,489.47,907.42,638.17,786.88,907.42,638.17,907.42Z"/>
+    <path class="cls-1" d="M638.17,870.7c-128.42,0-232.53-104.1-232.53-232.53S509.75,405.64,638.17,405.64,870.7,509.75,870.7,638.17,766.6,870.7,638.17,870.7Z"/>
+    <path class="cls-1" d="M834,638.17C834,746.32,746.32,834,638.17,834S442.36,746.32,442.36,638.17,530,442.36,638.17,442.36,834,530,834,638.17Z"/>
+  </g>
+</svg>
