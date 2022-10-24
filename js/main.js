@@ -1,43 +1,77 @@
 
 
-$(".wrapper .tab").click(function() {
-	$(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-	$(".tab_item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active");
 
-// svg
-$(function(){
-  jQuery('img.svg').each(function(){
-      var $img = jQuery(this);
-      var imgID = $img.attr('id');
-      var imgClass = $img.attr('class');
-      var imgURL = $img.attr('src');
+
+  // Carousel-news
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+      window.onscroll = myScroll;
+      var counter = 0; // Global Variable
+      function myScroll(){
+         var val = document.getElementById("envelope");
+         if(counter == 0){ // if counter is 1, it will not execute
+           if(window.pageYOffset > 500){
+              init();
+              $('.box').addClass('margin');
+              $('.open').addClass('opacity1');
+              setTimeout(function() {
+                $('.box').addClass('is-open');
+              }, 2500);
+              counter++; // increment the counter by 1, new value = 1
+           }
+         }
+        }
+  } else {
+      init();
+      $('.box').addClass('margin');
+      $('.open').addClass('opacity1');
+      setTimeout(function() {
+        $('.box').addClass('is-open');
+      }, 2500);
+  }
+};
+
+var x = window.matchMedia("(min-width: 768px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+  var canvas, stage, exportRoot;
+  function init() {
+    // --- write your JS code here ---
+    
+    createjs.MotionGuidePlugin.install();
+
+    canvas = document.getElementById("canvas");
+    images = images||{};
+
+    var loader = new createjs.LoadQueue(false);
+    loader.addEventListener("fileload", handleFileLoad);
+    loader.addEventListener("complete", handleComplete);
+    loader.loadManifest(lib.properties.manifest);
+  }
+
+  function handleFileLoad(evt) {
+    if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+  }
+
+  function handleComplete(evt) {
+    exportRoot = new lib.Rewire_2021_China_d();
+
+    stage = new createjs.Stage(canvas);
+    stage.addChild(exportRoot);
+    stage.update();
+
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
   
-      jQuery.get(imgURL, function(data) {
-          // Get the SVG tag, ignore the rest
-          var $svg = jQuery(data).find('svg');
-  
-          // Add replaced image's ID to the new SVG
-          if(typeof imgID !== 'undefined') {
-              $svg = $svg.attr('id', imgID);
-          }
-          // Add replaced image's classes to the new SVG
-          if(typeof imgClass !== 'undefined') {
-              $svg = $svg.attr('class', imgClass+' replaced-svg');
-          }
-  
-          // Remove any invalid XML tags as per http://validator.w3.org
-          $svg = $svg.removeAttr('xmlns:a');
-          
-          // Check if the viewport is set, else we gonna set it if we can.
-          if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-              $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-          }
-  
-          // Replace image with new SVG
-          $img.replaceWith($svg);
-  
-      }, 'xml');
-  
-  });
-});
+      }
+  // $(document).ready(function() {
+  //   $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+  //      В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" 
+  //     if ($(this).scrollTop() > top_show) init();
+  //     else init();
+  //   });
+  // });
+
